@@ -12,4 +12,7 @@ if __name__ == '__main__':
             continue
         except KeyboardInterrupt:
             break
-        NordHealthSolution.to_print(numbers)
+
+        sum_pairs_dict = NordHealthSolution.get_pairs_with_equal_sum_dict(numbers)
+
+        NordHealthSolution.to_print(sum_pairs_dict)
