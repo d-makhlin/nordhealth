@@ -17,6 +17,6 @@ class NordHealthSolution:
         return {summ: pairs_set for summ, pairs_set in sum_pairs.items() if len(pairs_set) >= 2}
 
     @staticmethod
-    def to_print(nums: List[int]):
-        for summ, pairs_set in NordHealthSolution.get_pairs_with_equal_sum_dict(nums).items():
-            print(f"Pairs : {pairs_set} have sum : {summ}")
+    def to_print(sum_pairs_dict: Dict[int, Set[Tuple[int]]]):
+        for summ, pairs_set in sum_pairs_dict.items():
+            print(f"Pairs : {' '.join(map(str, pairs_set))} have sum : {summ}")
